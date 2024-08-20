@@ -6,7 +6,8 @@ import { ArrowRight } from 'lucide-react'
 
 const Navbar = () => {
     return (
-        <nav className='flex flex-row h-20 bg-pink-500 items-center'>
+        <nav className='fixed flex flex-row h-20 w-screen items-center
+            bg-white drop-shadow-xl'>
             <div className='bg-white'>
                 <Link href='/'>
                     <Image src='/assets/CDLogo.svg' 
@@ -16,23 +17,27 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className='ml-auto'>
-                <ul className='flex flex-row justify-evenly bg-purple-400 
+                <ul className='flex flex-row justify-evenly text-black 
                     w-[40vw] min-w-[640px] mr-8 items-center'>
                     <li className=''>
                         <Link href='/'>
-                            <p>Our Community</p>
+                            <p className='hover:underline'>Our Community</p>
                         </Link>
                     </li>
                     <li className=''>
                         <Link href='/'>
-                            <p>Additional Resources</p>
+                            <p className='hover:underline'>Additional Resources</p>
                         </Link>
                     </li>
                     <li className=''>
                         <Link href='/' 
-                            className='flex flex-row bg-'>
+                            className='flex flex-row items-center gap-1
+                                py-1 px-4 rounded-lg 
+                                text-white font-medium
+                                shadow-md shadow-zinc-600 
+                                hover:bg-asumaroon-800 bg-asumaroon'>
                             <p>Get Started</p>
-                            <ArrowRight />
+                            <ArrowRight className='h-5 w-5' />
                         </Link>
                     </li>
                 </ul>

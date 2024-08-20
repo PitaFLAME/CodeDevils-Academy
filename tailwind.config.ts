@@ -9,6 +9,32 @@ const config: Config = {
   theme: {
     extend: {
 
+      fontFamily: {
+        'neue-haas-black': ['var(--font-neue-haas-black)', 'sans-serif'],
+        'neue-haas-black-italic': ['var(--font-neue-haas-black-italic)', 'sans-serif'],
+        'neue-haas-bold': ['var(--font-neue-haas-bold)', 'sans-serif'],
+        'neue-haas-bold-italic': ['var(--font-neue-haas-bold-italic)', 'sans-serif'],
+        'neue-haas-light': ['var(--font-neue-haas-light)', 'sans-serif'],
+        'neue-haas-light-italic': ['var(--font-neue-haas-light-italic)', 'sans-serif'],
+        'neue-haas-medium': ['var(--font-neue-haas-medium)', 'sans-serif'],
+        'neue-haas-medium-italic': ['var(--font-neue-haas-medium-italic)', 'sans-serif'],
+        'neue-haas': ['var(--font-neue-haas-roman)', 'sans-serif'],
+        'neue-haas-italic': ['var(--font-neue-haas-roman-italic)', 'sans-serif'],
+        'neue-haas-thin': ['var(--font-neue-haas-thin)', 'sans-serif'],
+        'neue-haas-thin-italic': ['var(--font-neue-haas-thin-italic)', 'sans-serif'],
+        'neue-haas-thin-xs': ['var(--font-neue-haas-xthin)', 'sans-serif'],
+        'neue-haas-thin-xs-italic': ['var(--font-neue-haas-xthin-italic)', 'sans-serif'],
+        'neue-haas-thin-xxs': ['var(--font-neue-haas-xxthin)', 'sans-serif'],
+        'neue-haas-thin-xxs-italic': ['var(--font-neue-haas-xxthin-italic)', 'sans-serif'],
+
+        'arial': ['var(--font-arial)', 'sans-serif'],
+        'arial-black': ['var(--font-arial-black)', 'sans-serif'],
+        'arial-bold': ['var(--font-arial-bold)', 'sans-serif'],
+        'arial-bold-italic': ['var(--font-arial-bold-italic)', 'sans-serif'],
+        'arial-italic': ['var(--font-arial-italic)', 'sans-serif'],
+        'arial-black-italic': ['var(--font-arial-black-italic)', 'sans-serif'],
+      },
+
       colors: {
         'asumaroon': {
           DEFAULT: '#8C1D40',
