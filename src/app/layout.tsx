@@ -183,7 +183,7 @@ export default function RootLayout({
         ${arialBoldItalic.variable}
         ${arialBlackItalic.variable}
         `}>
-      <Navbar />
+        <Navbar />
         {children}</body>
     </html>
   );
