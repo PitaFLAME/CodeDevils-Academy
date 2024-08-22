@@ -7,10 +7,10 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="w-screen h-[200vh] bg-white ">
+    <main className="w-full bg-white">
       <div className="h-36" />
       <MaxWidthWrapper>
-        <Backpack />
+        
         <LandingTitle />
         <LandingImageCards />
 
