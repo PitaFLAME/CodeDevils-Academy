@@ -1,22 +1,18 @@
-import LandingImageCards from "@/components/landing/LandingImageCards";
-import LandingTitle from "@/components/landing/LandingTitle";
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { ArrowRight, Backpack } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import LandingPage from "@/components/landing/LandingPage";
+
 
 export default function Home() {
+  const user = true;
   return (
-    <main className="w-full bg-white">
-      <div className="h-36" />
-      <MaxWidthWrapper>
+    <main className="w-full bg-white overflow-hidden">
+      <div className="h-36" /> {/* Spacer for navbar */}
         
-        <LandingTitle />
-        <LandingImageCards />
+      { user?
+        <LandingPage /> : <></>
+      }
+      
 
-        
 
-      </MaxWidthWrapper>
     </main>
   );
 }
