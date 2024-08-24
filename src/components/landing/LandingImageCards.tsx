@@ -1,9 +1,13 @@
 import Image from "next/image"
 import GetStarted from "../GetStarted"
+import { useOverlay } from "../login/OverlayContext";
+import { ArrowRight } from "lucide-react";
 
 
 const LandingImageCards = () => {
-    
+
+    const { isOverlayOpen, toggleOverlay, closeOverlay } = useOverlay();
+
     const images = [
         (
             <Image key={0}
@@ -43,7 +47,11 @@ const LandingImageCards = () => {
 
             <div />
             <div className="flex items-start justify-center" >
-                <GetStarted />
+                <GetStarted className="mt-24 py-4 px-6 text-black text-lg
+                    hover:bg-asugold-800 bg-asugold" >
+                    <p>Get Started</p>
+                    <ArrowRight className="h-6 w-6" />
+                </GetStarted>
             </div>
             <div />
 

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { kMaxLength } from 'buffer'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import GetStarted from './GetStarted'
 
 const Navbar = () => {
     return (
@@ -30,15 +31,12 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className=''>
-                        <Link href='/' 
-                            className='flex flex-row items-center gap-1
-                                py-1 px-4 rounded-lg 
-                                text-white font-medium font-neue-haas-medium
-                                shadow-md shadow-zinc-600 
-                                hover:bg-asumaroon-800 bg-asumaroon'>
+                        <GetStarted
+                            className="py-1 px-4 text-white text-base
+                                hover:bg-asumaroon-800 bg-asumaroon">
                             <p>Get Started</p>
                             <ArrowRight className='h-5 w-5' />
-                        </Link>
+                        </GetStarted>
                     </li>
                 </ul>
             </div>

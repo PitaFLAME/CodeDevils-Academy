@@ -1,24 +1,35 @@
 'use client'
 
+import { useState } from "react"
 import LoginOverlay from "../login/LoginOverlay"
 import MaxWidthWrapper from "../MaxWidthWrapper"
 import LandingImageCards from "./LandingImageCards"
 import LandingTitle from "./LandingTitle"
+import { OverlayProvider } from "../login/OverlayContext"
+import LandingDimmer from "./LandingDimmer"
+import Navbar from "../Navbar"
+
+
 
 
 const LandingPage = () => {
-    const loginOverlay = true
+
+
+
     return (
-        <>
-            <div className="absolute w-full h-full -m-20 bg-zinc-600 opacity-35" />
+        <OverlayProvider>
+            <Navbar />
+            <div className="h-36" /> {/* Spacer for navbar */}
+            <LandingDimmer />
             <MaxWidthWrapper>
                 <LandingTitle />
                 <LandingImageCards />
 
                 
             </MaxWidthWrapper>
-            <LoginOverlay enabled={loginOverlay} />
-        </>
+            <LoginOverlay />
+            
+        </OverlayProvider>
     )
 }
 
