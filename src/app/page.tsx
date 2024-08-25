@@ -1,18 +1,19 @@
+import ContentSwitcher from "@/components/ContentSwitcher";
 import Dashboard from "@/components/Dashboard";
 import LandingPage from "@/components/landing/LandingPage";
+import { UserProvider } from "@/components/login/UserContext";
+
+
 
 
 export default function Home() {
-  const user = true;
+  
   return (
-    <main className="w-full bg-white overflow-hidden">
+    <main className="w-full bg-white overflow-x-hidden">
       
-        
-      { user ?
-        <LandingPage /> : <Dashboard />
-      }
-      
-
+      <UserProvider>
+        <ContentSwitcher />
+      </UserProvider> 
 
     </main>
   );

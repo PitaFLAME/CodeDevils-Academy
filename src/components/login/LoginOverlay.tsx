@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { useOverlay } from './OverlayContext';
+import { useUser } from './UserContext';
 
-
-const LoginOverlay = () => {
+const LoginOverlay: React.FC = () => {
   const overlayRef = useRef<HTMLDivElement | null>(null);
 
-  const { isOverlayOpen, toggleOverlay, closeOverlay } = useOverlay();
+  const { isOverlayOpen, closeOverlay } = useOverlay();
+  const { toggleUser } = useUser();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -17,16 +18,17 @@ const LoginOverlay = () => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-    };  
+    };
   }, [isOverlayOpen, closeOverlay]);
 
   return (
-    <div ref={overlayRef}
+    <div
+      ref={overlayRef}
       className={`fixed h-[100vh] bg-white right-0 top-0 z-50 border-l-4 border-asumaroon
             md:w-[60vw] lg:w-[616px] xl:w-[860px]
             transition-transform duration-500
-            ${isOverlayOpen ? 'translate-x-0' : 'translate-x-full'} hidden md:block`} >
-
+            ${isOverlayOpen ? 'translate-x-0' : 'translate-x-full'} hidden md:block`}
+    >
       <div className="relative h-full w-full">
         <div className="absolute bg-asumaroon-300 right-0 top-0 w-[60%] h-[90%]" />
         <div className="absolute bg-asumaroon-100 left-0 top-0 w-[80%] h-[40%]" />
@@ -52,13 +54,15 @@ const LoginOverlay = () => {
             <div className="flex justify-end w-full">
               <h2
                 className="text-asumaroon text-md font-neue-haas-medium text-right 
-                    hover:underline hover:underline-offset-2 cursor-pointer">
+                    hover:underline hover:underline-offset-2 cursor-pointer"
+              >
                 FORGOT PASSWORD
               </h2>
             </div>
           </div>
 
           <div
+            onClick={toggleUser} // Use the function extracted from useUser here
             className="flex justify-center items-center mt-24 cursor-pointer w-full h-12 
                 bg-asumaroon text-white text-md font-neue-haas-medium 
                 hover:bg-asumaroon-800 hover:underline hover:underline-offset-2"
@@ -69,17 +73,13 @@ const LoginOverlay = () => {
           <div
             className="flex justify-center items-center mt-8 cursor-pointer w-full h-12 
                 bg-asumaroon-100 text-asumaroon text-md font-neue-haas-medium 
-                hover:bg-zinc-100 hover:underline hover:underline-offset-2">
+                hover:bg-zinc-100 hover:underline hover:underline-offset-2"
+          >
             Create Account
           </div>
-
-
         </div>
-
       </div>
-    
     </div>
-
   );
 };
 
