@@ -1,9 +1,13 @@
-import ContentSwitcher from "@/components/ContentSwitcher";
-import Dashboard from "@/components/Dashboard";
+"use client"
+
+import Dashboard from "@/components/dashboard/Dashboard";
 import LandingPage from "@/components/landing/LandingPage";
-import { UserProvider } from "@/components/login/UserContext";
+import { UserProvider, useUser } from "@/components/login/UserContext";
 
-
+const ContentSwitcher = () => {
+  const { hasUser } = useUser();
+  return hasUser ? <Dashboard /> : <LandingPage />;
+};
 
 
 export default function Home() {
