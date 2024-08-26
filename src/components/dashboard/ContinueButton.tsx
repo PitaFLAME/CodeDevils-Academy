@@ -5,7 +5,7 @@ import Link from "next/link"
 const ContinueButton = () => {
 
     return (
-        <Link href="/"
+        <Link href="/learn"
             className="flex flex-row justify-center items-center gap-1
             h-36 w-40 rounded-xl ml-auto mr-40 my-auto 
             font-neue-haas-medium text-lg

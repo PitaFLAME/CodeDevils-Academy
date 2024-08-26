@@ -8,6 +8,7 @@ import LandingTitle from "./LandingTitle"
 import { OverlayProvider } from "../login/OverlayContext"
 import ScreenDimmer from "../Dimmer"
 import Navbar from "../login/Navbar"
+import DiscordCommunity from "../DiscordCommunity"
 
 
 
@@ -24,10 +25,13 @@ const LandingPage = () => {
             <MaxWidthWrapper>
                 <LandingTitle />
                 <LandingImageCards />
-
                 
+                <DiscordCommunity />
+
             </MaxWidthWrapper>
             <LoginOverlay />
+            
+            
             
         </OverlayProvider>
     )

@@ -12,7 +12,7 @@ const Navbar = () => {
             bg-white drop-shadow-xl z-40'>
             <div className='bg-white'>
                 <Link href='/'>
-                    <Image src='/assets/CDLogo.svg' 
+                    <Image src='/assets/logos/CDLogo.svg' 
                         alt='CodeDevils Logo' 
                         width={180} height={200}
                         className='mx-16' />
