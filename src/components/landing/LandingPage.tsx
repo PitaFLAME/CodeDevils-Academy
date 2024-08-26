@@ -6,8 +6,8 @@ import MaxWidthWrapper from "../MaxWidthWrapper"
 import LandingImageCards from "./LandingImageCards"
 import LandingTitle from "./LandingTitle"
 import { OverlayProvider } from "../login/OverlayContext"
-import LandingDimmer from "./LandingDimmer"
-import Navbar from "../Navbar"
+import ScreenDimmer from "../Dimmer"
+import Navbar from "../login/Navbar"
 
 
 
@@ -20,7 +20,7 @@ const LandingPage = () => {
         <OverlayProvider>
             <Navbar />
             <div className="h-36" /> {/* Spacer for navbar */}
-            <LandingDimmer />
+            <ScreenDimmer />
             <MaxWidthWrapper>
                 <LandingTitle />
                 <LandingImageCards />

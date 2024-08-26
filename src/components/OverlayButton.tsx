@@ -14,10 +14,8 @@ const GetStarted = ({ className, children }:{
         
         <button
             onClick={toggleOverlay}
-            className={`flex flex-row items-center gap-1 ${className}
-                rounded-lg
-                font-neue-haas-bold
-                shadow-md shadow-zinc-600`}>
+            className={`flex flex-row items-center gap-1 
+                ${className}`}>
             {children}
         </button>
     )

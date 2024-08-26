@@ -3,7 +3,8 @@ import Image from 'next/image'
 import { kMaxLength } from 'buffer'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import GetStarted from './GetStarted'
+import GetStarted from '../OverlayButton'
+import OverlayButton from '../OverlayButton'
 
 const Navbar = () => {
     return (
@@ -27,16 +28,13 @@ const Navbar = () => {
                     </li>
                     <li className=''>
                         <Link href='/'>
-                            <p className='hover:underline'>Additional Resources</p>
+                            <p className='hover:underline'>Saved Resources</p>
                         </Link>
                     </li>
                     <li className=''>
-                        <GetStarted
-                            className="py-1 px-4 text-white text-base
-                                hover:bg-asumaroon-800 bg-asumaroon">
-                            <p>Get Started</p>
-                            <ArrowRight className='h-5 w-5' />
-                        </GetStarted>
+                        <OverlayButton>
+                            <p className='hover:underline'>Account</p>
+                        </OverlayButton>
                     </li>
                 </ul>
             </div>

@@ -1,8 +1,8 @@
-import { useOverlay } from "../login/OverlayContext"
+import { useOverlay } from "./login/OverlayContext"
 
 
 
-const LandingDimmer = () => {
+const ScreenDimmer = () => {
 
     const { isOverlayOpen } = useOverlay();
 
@@ -13,4 +13,4 @@ const LandingDimmer = () => {
     )
 }
 
-export default LandingDimmer
+export default ScreenDimmer
