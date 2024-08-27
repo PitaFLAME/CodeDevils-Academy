@@ -1,13 +1,14 @@
 import ScreenDimmer from "../Dimmer"
-import LoginOverlay from "../login/LoginOverlay"
-import { OverlayProvider } from "../login/OverlayContext"
+import LoginOverlay from "../account/login/LoginOverlay"
+import { OverlayProvider } from "../account/OverlayContext"
 import MaxWidthWrapper from "../MaxWidthWrapper"
-import Navbar from "../loggedin/Navbar"
+import Navbar from "../account/loggedin/Navbar"
 import DashboardTitle from "./DashboardTitle"
 import ContinueContainer from "./ContinueContainer"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import MiscResources from "./MiscResources"
+import DiscordCommunity from "../DiscordCommunity"
 
 
 const Dashboard = () => {
@@ -32,6 +33,8 @@ const Dashboard = () => {
                 </Link>
 
                 <MiscResources />
+                
+                <DiscordCommunity />
 
             </MaxWidthWrapper>
 

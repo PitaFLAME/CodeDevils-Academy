@@ -2,7 +2,7 @@
 
 import Dashboard from "@/components/dashboard/Dashboard";
 import LandingPage from "@/components/landing/LandingPage";
-import { UserProvider, useUser } from "@/components/login/UserContext";
+import { UserProvider, useUser } from "@/components/account/UserContext";
 
 const ContentSwitcher = () => {
   const { hasUser } = useUser();

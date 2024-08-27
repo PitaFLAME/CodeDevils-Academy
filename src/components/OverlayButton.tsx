@@ -1,9 +1,9 @@
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
-import { useOverlay } from "./login/OverlayContext"
+import { useOverlay } from "./account/OverlayContext"
 
         
-const GetStarted = ({ className, children }:{
+const OverlayButton = ({ className, children }:{
     className?: string
     children?: React.ReactNode
 }) => {
@@ -21,4 +21,4 @@ const GetStarted = ({ className, children }:{
     )
 }
 
-export default GetStarted
+export default OverlayButton

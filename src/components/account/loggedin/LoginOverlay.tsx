@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { useOverlay } from './OverlayContext';
-import { useUser } from './UserContext';
+import { useOverlay } from '../OverlayContext';
+import { useUser } from '../UserContext';
 
 const LoginOverlay: React.FC = () => {
   const overlayRef = useRef<HTMLDivElement | null>(null);

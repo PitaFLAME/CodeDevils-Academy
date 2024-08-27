@@ -1,6 +1,6 @@
 import Image from "next/image"
-import GetStarted from "../OverlayButton"
-import { useOverlay } from "../login/OverlayContext";
+import OverlayButton from "../OverlayButton"
+import { useOverlay } from "../account/OverlayContext";
 import { ArrowRight } from "lucide-react";
 
 
@@ -34,7 +34,7 @@ const LandingImageCards = () => {
     ]
     
     return (
-        <div className="grid grid-cols-3 grid-rows-2 gap-4 mt-12" >
+        <div className="grid grid-cols-3 grid-rows-2 gap-4 mt-12 -mb-20" >
             <div>
                 {images[0]}
             </div>
@@ -47,12 +47,12 @@ const LandingImageCards = () => {
 
             <div />
             <div className="flex items-start justify-center" >
-                <GetStarted className="mt-24 py-4 px-6 text-black text-lg
+                <OverlayButton className="mt-24 py-4 px-6 text-black text-lg
                     rounded-lg shadow-md shadow-zinc-600 font-neue-haas-bold
                     hover:bg-asugold-800 bg-asugold" >
                     <p>Get Started</p>
                     <ArrowRight className="h-6 w-6" />
-                </GetStarted>
+                </OverlayButton>
             </div>
             <div />
 
