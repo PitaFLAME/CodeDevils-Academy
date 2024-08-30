@@ -50,7 +50,7 @@ const DiscordCommunity = ({ className }:{ className?: string }) => {
                 group">
                 <Circle className="absolute top-0 right-0 h-8 w-8 z-10 opacity-0
                     text-transparent bg-gradient-radial from-white to-transparent
-                    group-hover:opacity-35" />
+                    group-hover:opacity-35 transition-opacity duration-300" />
                 <Image className="rounded-[19px] z-40"
                     src="/assets/logos/CodeDevils-Discord.png"
                     alt="CodeDevils Discord Logo"
