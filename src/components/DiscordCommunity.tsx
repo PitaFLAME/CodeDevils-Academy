@@ -53,7 +53,7 @@ const DiscordCommunity = ({ className }:{ className?: string }) => {
                     group-hover:opacity-35 transition-opacity duration-300" />
                 <Image className="rounded-[19px] z-40"
                     src="/assets/logos/CodeDevils-Discord.png"
-                    alt="CodeDevils Discord Logo"
+                    alt="CodeDevils Discord Logoo"
                     width={80}
                     height={80}
                 />
