@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useOverlay } from '../OverlayContext';
 import { useUser } from '../UserContext';
+import Link from 'next/link';
 
 const LoginOverlay: React.FC = () => {
   const overlayRef = useRef<HTMLDivElement | null>(null);
@@ -61,14 +62,14 @@ const LoginOverlay: React.FC = () => {
             </div>
           </div>
 
-          <div
-            onClick={toggleUser} // Use the function extracted from useUser here
+          <Link href="/dashboard"
+            onClick={toggleUser}
             className="flex justify-center items-center mt-24 cursor-pointer w-full h-12 
                 bg-asumaroon text-white text-md font-neue-haas-medium 
                 hover:bg-asumaroon-800 hover:underline hover:underline-offset-2"
           >
             Sign In
-          </div>
+          </Link>
 
           <div
             className="flex justify-center items-center mt-8 cursor-pointer w-full h-12 
