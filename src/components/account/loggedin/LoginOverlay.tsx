@@ -65,7 +65,7 @@ const LoginOverlay: React.FC = () => {
             onClick={toggleUser} // Use the function extracted from useUser here
             className="flex justify-center items-center mt-24 cursor-pointer w-full h-12 
                 bg-asumaroon text-white text-md font-neue-haas-medium 
-                hover:bg-asumaroon-800 hover:underline hover:underline-offset-2"
+                hover:bg-asumaroon-800 hover:underline"
           >
             Sign In
           </div>
